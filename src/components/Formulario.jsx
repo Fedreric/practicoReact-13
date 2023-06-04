@@ -5,13 +5,20 @@ import Clima from "./Clima";
 const Formulario = () => {
     const [pais, setPais] = useState('');
     const [datos, setDatos] = useState({});
+    const [mostrarClima, setMostrarClima] = useState(false);
     const consultarApi = async (pais) => {
         try {
           const respuesta = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?q=${pais}&appid=436b5789015431fd04ad33ddb1024d71`
+            `https://api.openweathermap.org/data/2.5/weather?q=${pais}&appid=436b5789015431fd04ad33ddb1024d71&lang=es`
           );
           const dato = await respuesta.json();
-          setDatos(dato);
+          console.log(dato)
+          if(dato.cod === 200){
+              setDatos(dato);
+              setMostrarClima(true);
+          }else{
+            setMostrarClima(false);
+          }
         } catch (e) {
           console.log(e);
         }
@@ -34,7 +41,7 @@ const Formulario = () => {
           </Button>
         </div>
       </Form>
-      <Clima></Clima>
+      <Clima datos={datos} mostrarClima={mostrarClima}></Clima>
     </Container>
   );
 };
