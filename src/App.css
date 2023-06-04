@@ -1,0 +1,37 @@
+body{
+  color: rgb(75, 0, 130);
+  background-color: #abfafe;
+  height: 100vh;
+}
+#root{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.mainPage{
+  flex-grow: 1;
+}
+.btn{
+  background-color: rgb(75, 0, 130);
+  color: #abfafe;
+}
+.btn:hover{
+  background-color: rgb(93, 5, 156);
+}
+.card-clima{
+  -webkit-box-shadow: -13px 19px 8px -4px rgba(0,0,0,0.52);
+  -moz-box-shadow: -13px 19px 8px -4px rgba(0,0,0,0.52);
+  box-shadow: -13px 19px 8px -4px rgba(0,0,0,0.52);
+  color: indigo;
+}
+
+@media (width >= 992px){
+  .card-clima{
+    width: 50%;
+  }
+}
+@media (width <= 576px){
+  .card-clima{
+    width:100%;
+  }
+}
