@@ -3,6 +3,14 @@ body{
   background-color: #abfafe;
   height: 100vh;
 }
+#root{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.mainPage{
+  flex-grow: 1;
+}
 .btn{
   background-color: rgb(75, 0, 130);
   color: #abfafe;
