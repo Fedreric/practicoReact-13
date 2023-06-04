@@ -5,10 +5,7 @@ const Formulario = () => {
     <Container className="my-5">
       <Form className="row align-items-center">
         <Form.Group className="col-md-10" controlId="pais">
-          <FloatingLabel
-            controlId="pais"
-            label="Ingrese una localidad"
-          >
+          <FloatingLabel controlId="pais" label="Ingrese una localidad">
             <Form.Control type="text" placeholder="Ej: Argentina" />
           </FloatingLabel>
         </Form.Group>
