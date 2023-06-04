@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Container, Form, Button, FloatingLabel } from "react-bootstrap";
+import Clima from "./Clima";
 
 const Formulario = () => {
     const [pais, setPais] = useState('');
@@ -33,6 +34,7 @@ const Formulario = () => {
           </Button>
         </div>
       </Form>
+      <Clima></Clima>
     </Container>
   );
 };
