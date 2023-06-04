@@ -6,7 +6,7 @@ const Clima = ({ datos, mostrarClima }) => {
 
   const monstrarCard = mostrarClima ? (
     <Container className="mt-5">
-      <Card className="text-center w-100 mx-auto card-clima">
+      <Card className="text-center card-clima mx-auto">
         <Card.Header>{datos?.name}</Card.Header>
         <Card.Body>
           <blockquote className="blockquote mb-0">
@@ -26,7 +26,7 @@ const Clima = ({ datos, mostrarClima }) => {
     </Container>
   ) : (
     <Container className="mt-5 text-center">
-        <h1 className="fst-italic text-danger display-6">INGRESA UN PAIS O LOCALIDAD VALIDA</h1>
+        <h1 className="fst-italic display-6">INGRESA UN PAIS O LOCALIDAD VALIDA</h1>
     </Container>
   );
   return monstrarCard;
