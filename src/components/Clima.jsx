@@ -29,6 +29,7 @@ const Clima = ({ datos, mostrarClima }) => {
         <h1 className="fst-italic display-6">INGRESA UN PAIS O LOCALIDAD VALIDA</h1>
     </Container>
   );
+
   return monstrarCard;
 };
 
